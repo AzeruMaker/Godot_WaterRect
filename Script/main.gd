@@ -2,6 +2,7 @@ extends Node2D
 
 var stone = preload("res://Scene/character_body_2d.tscn")
 
+
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.is_pressed():
 		

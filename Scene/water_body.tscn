@@ -3,7 +3,6 @@
 [ext_resource type="Script" path="res://Script/water_body.gd" id="1_yv36r"]
 
 [node name="Water body" type="Node2D"]
-position = Vector2(280, 135)
 script = ExtResource("1_yv36r")
 
 [node name="Water_Polygon" type="Polygon2D" parent="."]

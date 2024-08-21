@@ -3,15 +3,11 @@
 [ext_resource type="Script" path="res://Script/water_spring.gd" id="1_0rxtu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4rt5k"]
+size = Vector2(0, 0)
 
 [node name="Water spring" type="Node2D"]
 position = Vector2(2, 1)
 script = ExtResource("1_0rxtu")
-
-[node name="Polygon2D" type="Polygon2D" parent="."]
-position = Vector2(-10, -9)
-scale = Vector2(0.749715, 0.444444)
-polygon = PackedVector2Array(0.195117, 41.75, -0.414639, 1.25, 20.9268, 2, 22.2606, 44)
 
 [node name="Area2D" type="Area2D" parent="."]
 

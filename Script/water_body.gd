@@ -7,10 +7,10 @@ extends Node2D
 
 # Spring array
 var springs  = []
-var passes = 6
+var passes = 5
 
 #distance in pixel between each spring
-@export var distance_between_springs = 50
+@export var distance_between_springs = 50.5
 
 # number of spring in the scene
 @export var spring_number = 24
@@ -21,11 +21,14 @@ var water_lenght = distance_between_springs * spring_number
 @onready var water_spring = preload("res://Scene/water_spring.tscn")
 @export var depth = 1000
 var target_height = global_position.y
-var bottom = target_height * depth
-
+@export var bottom = target_height * depth
 @onready var water_polygon = $Water_Polygon
 
 
+func instantiate ():
+	print ("Hello 1")
+	pass
+	
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	for i in range(spring_number):

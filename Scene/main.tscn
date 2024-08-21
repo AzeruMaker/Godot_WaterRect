@@ -1,16 +1,21 @@
 [gd_scene load_steps=5 format=3 uid="uid://61kvmm1hphyf"]
 
 [ext_resource type="Script" path="res://Script/main.gd" id="1_25gyk"]
-[ext_resource type="PackedScene" uid="uid://br64uciy8yg1t" path="res://Scene/water_body.tscn" id="2_rbdr4"]
-[ext_resource type="Shader" path="res://Shader/water.gdshader" id="2_yveo3"]
+[ext_resource type="Script" path="res://Scene/collision_shape_2d.gd" id="3_imdjr"]
+[ext_resource type="Script" path="res://Scene/area_2d.gd" id="4_nmasm"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_p5rv6"]
-shader = ExtResource("2_yveo3")
-shader_parameter/tint = Color(1, 1, 1, 1)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6nacb"]
+size = Vector2(987.563, 213.625)
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_25gyk")
+metadata/_edit_vertical_guides_ = [-304.0]
 
-[node name="Water body" parent="." instance=ExtResource("2_rbdr4")]
-material = SubResource("ShaderMaterial_p5rv6")
-position = Vector2(0, 467)
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(128, 248)
+script = ExtResource("4_nmasm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(498.219, 109.188)
+shape = SubResource("RectangleShape2D_6nacb")
+script = ExtResource("3_imdjr")
